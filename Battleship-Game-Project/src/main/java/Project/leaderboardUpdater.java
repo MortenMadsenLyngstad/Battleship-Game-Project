@@ -101,7 +101,7 @@ public class leaderboardUpdater implements Initializable {
      * @throws Exception if the file is not found
      */
     public void loadLeaderboard(ActionEvent event) {
-        checkFile("TDT4100-prosjekt-morteml/leaderboard.txt");
+        checkFile("Battleship-Game-Project/leaderboard.txt");
         addToLeaderboard();
         initialize(null, null);
     }
