@@ -1,0 +1,3 @@
+Morten | 16
+Knut | 17
+Hans | 18

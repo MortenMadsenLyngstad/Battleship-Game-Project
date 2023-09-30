@@ -1,0 +1,114 @@
+@startuml classdiagram battleship
+
+class battleshipGame {
+    -placingShips: int
+    -finishedPlacing: boolean
+    +opponentBoard: Board
+    +hit: boolean
+    +enemyMove: boolean
+    +ownBoard: Board
+    + randomMoveGenerator: Random
+    +botShots: int
+    +myShots: int
+    +botshipPosX: List
+    +botshipPosY: List
+    +myshipPosX: List
+    +myshipPosY: List
+
+    +createMap()
+    +startGame()
+    +improvedRandomizedMove()
+}
+
+class board {
+    -rows: Vbox
+    -enemyBoard: boolean
+    +shipsAlive: int
+    +numCells: int
+
+    +Board()
+    +getBoardSize()
+    +getShip()
+    +setShip()
+    +possiblePlacement()
+    +checkSurrondingCells()
+    +getCell()
+    +validPoint()
+    +validPoint()
+    +gameOverWin()
+    +gameOverLose()
+}
+
+class ship {
+    -length: int
+    -health: int
+    -vertical: boolean
+    -alive: boolean
+
+    +getLength()
+    +getHealth()
+    +getVertical()
+    +setLength()
+    +setVertical()
+    +isAlive()
+    +hit()
+}
+
+class AIHitShip {
+    #hitLeft: boolean
+    #hitRight: boolean
+    #hitUp: boolean
+    #hitDown: boolean
+
+    +resetValues()
+    +AIHitShipRight()
+    +AIHitShipLeft()
+    +AIHitShipUp()
+    +AIHitShipDown()
+    +AINormalShot()
+}
+
+class cell {
+    -x,y: int
+    -hasShip: boolean
+    -wasShot: boolean
+    +ship: Ship
+
+    +Cell()
+    +cellX()
+    +cellY()
+    +hasShip()
+    +wasShot()
+    +setHasShip()
+    +shot()
+}
+
+class leaderboardUpdater {
+    -scene: Scene
+    -stage: Stage
+    -players: List
+    ~listView: ListView
+    ~items: ObservableList
+
+    +checkFile()
+    +addToLeaderboard()
+    +initialize()
+    +switchToMainScreen()
+    +loadLeaderBoard()
+}
+
+class Player {
+    -name: String
+    -score: int
+
+    +Player()
+    +getName()
+    +getScore()
+    +compareTo()
+}
+
+battleshipGame --|> AIHitShip
+battleshipGame "1" *-- "2" board
+board "1" *-- "100" cell
+board "1" *-- "0..5" ship
+leaderboardUpdater "1" --* "0..*" Player
