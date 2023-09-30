@@ -1,0 +1,4 @@
+Harald | 27
+Trygve | 22
+Elias | 18
+Sofie | 42
