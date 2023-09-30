@@ -20,13 +20,16 @@ To run the Battleship Game, you need the following:
 
 ## How to Play
 
-- Press run application.
-- Login with a username
+&nbsp; If there is any problems with finding filepaths, press *CTRL+SHIFT+P* and type *>Java: Clean Language Server Workspace*
+
+- Press run over the main-method in *battleshipApp.java* to start the game
+- Login with a username and press *PLAY*
 - The game board consists of two grids: one for your fleet and one for your opponent's fleet.
 - Click on cells in your own board to place ships - you have 5 ships to place (use ALT+Click to get horizontal ships)
 - Click on the cells in your opponent's grid to take shots and try to sink their ships.
 - Your fleet is on the left side, and your opponent's fleet is on the right side.
 - The game ends when all of your opponent's ships are sunk or when your fleet is destroyed.
+- You can view the leaderboard by clicking on the *Leaderboard* button on the startscreen.
 
 ## License
 
@@ -36,4 +39,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - Inspired by the classic Battleship board game.
 
-Have fun playing Battleship!
+
+
+# Have fun playing Battleship!

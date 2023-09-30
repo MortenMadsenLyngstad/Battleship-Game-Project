@@ -11,9 +11,9 @@ import javafx.application.Platform;
 import javafx.scene.control.ListView;
 
 public class leaderboardUpdaterTest {
-    private final String testPath1 = "C:/Users/Morte/2. semester/Objekt/Projekt/TDT4100-prosjekt-morteml/testFile1.txt";
-    private final String testPath2 = "C:/Users/Morte/2. semester/Objekt/Projekt/TDT4100-prosjekt-morteml/testFile2.txt";
-    private final String testPath3 = "C:/Users/Morte/2. semester/Objekt/Projekt/TDT4100-prosjekt-morteml/testFile3.txt";
+    private final String testPath1 = "Battleship-Game-Project/testFile1.txt";
+    private final String testPath2 = "Battleship-Game-Project/testFile2.txt";
+    private final String testPath3 = "Battleship-Game-Project/testFile3.txt";
 
     private leaderboardUpdater updater;
     private ListView<String> listView;
